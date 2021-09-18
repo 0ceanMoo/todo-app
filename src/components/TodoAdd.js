@@ -1,8 +1,20 @@
-const TodoAdd = ({inputEl, handleAddTodoListItem}) => {
+const TodoAdd = ({
+    placeholder,
+    leftIcon,
+    buttonText,
+    inputEl,
+    handleAddTodoListItem,
+  }) => {
   return (
     <>
-      <textarea ref={inputEl} />
-      <button onClick={handleAddTodoListItem}>+ TODOを追加</button>
+      <textarea
+        placeholder={placeholder}
+        bgColor="white"
+        mt="8"
+        backgroundColor="gray.400"
+        ref={inputEl}
+      />
+      <button onClick={handleAddTodoListItem}>{leftIcon} {buttonText}</button>
     </>
   )
 }
